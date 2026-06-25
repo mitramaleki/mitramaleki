@@ -1,0 +1,55 @@
+/* Reset & basic page styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Pro', serif;
+  background-color: #000;       /* space‑black */
+  color: #fff;                  /* white text */
+  overflow: hidden;             /* hide scrollbars – the canvas fills the window */
+}
+
+/* Container that holds the Three.js canvas */
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Info panel that appears when you click a planet */
+#info-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 80vh;
+  background: rgba(255,255,255,0.9); /* semi‑transparent white */
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 2;
+  overflow-y: auto;
+  transition: opacity 0.3s;
+}
+
+#info-panel h2 {
+  margin-top: 0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+#info-panel p {
+  line-height: 1.6;
+}
+
+/* Hide the panel when needed (not used now, but kept for convenience) */
+#info-panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
